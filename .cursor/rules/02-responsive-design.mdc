@@ -1,5 +1,36 @@
 ---
-description:
-globs:
+description: 
+globs: src/app/*.tsx,src/components/**/*.tsx,tailwind.config.js
 alwaysApply: false
 ---
+---
+title: Responsive Design Quick Reference
+description: Key breakpoints and responsive strategies.
+order: 2
+---
+
+# Responsive Design Quick Reference
+
+Leverage Tailwind CSS responsive variants for an optimal experience on all devices.
+
+## 1. Breakpoints (Tailwind Defaults)
+
+-   `sm`: `640px`
+-   `md`: `768px` (Aligns with "Tablet" in original spec)
+-   `lg`: `1024px` (Aligns with "Desktop" in original spec)
+-   `xl`: `1280px`
+-   `2xl`: `1536px`
+
+## 2. Responsive Strategies
+
+-   **Mobile-First:** Styles without prefixes apply to all screens. Use `sm:`, `md:`, `lg:` to override for larger screens.
+-   **Layouts:** Use responsive grid (`md:grid-cols-2`) and flex (`sm:flex-row`) utilities.
+-   **Typography & Spacing:** Use responsive variants (e.g., `text-xl lg:text-2xl`, `py-8 md:py-12`).
+-   **Visibility:** `hidden md:block`, etc.
+-   See `src/app/page.tsx` for numerous examples.
+
+---
+### Relevant Project Files (Globs)
+- Tailwind Config (Breakpoints): `tailwind.config.js` (Uses Tailwind defaults unless overridden)
+- Usage Examples: `src/app/**/page.tsx`
+- Global Styles with Responsive Modifiers: `src/app/globals.css`

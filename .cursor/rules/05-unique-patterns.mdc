@@ -1,5 +1,41 @@
 ---
-description:
-globs:
+description: 
+globs: src/app/*.tsx,src/components/**/*.tsx,tailwind.config.js
 alwaysApply: false
 ---
+---
+title: Key UI Patterns Quick Reference
+description: Overview of common UI structures.
+order: 5
+---
+
+# Key UI Patterns Quick Reference
+
+Common reusable structures. See `src/app/page.tsx` for detailed HTML structure and `src/app/globals.css` for associated CSS classes.
+
+## 1. Hero Section
+-   Layout: Multi-column on desktop, stacks on mobile.
+-   Content: Prominent H1, supporting text, CTA, visual element (e.g., animated card).
+
+## 2. Feature/Service Cards (`.feature-card`)
+-   Style: `bg-white`, padding, rounded corners, border, hover effects.
+-   Content: Typically icon, title, description.
+
+## 3. Pricing Card (using `.card`)
+-   Layout: Often a single, prominent card.
+-   Content: Plan info, price, features list, CTA.
+
+## 4. Testimonial Cards (using `.card`)
+-   Content: Quote, name, title.
+
+## 5. FAQ Items (`.faq-item`)
+-   Style: Question (bold/larger), answer, bottom border.
+    *No interactive accordion implemented yet.*
+
+## 6. Badges (`.badge`)
+-   Style: Small, rounded, accent-colored background/text for highlights.
+
+---
+### Relevant Project Files (Globs)
+- Pattern Implementations: `src/app/page.tsx`
+- Associated CSS Classes: `src/app/globals.css`

@@ -1,5 +1,64 @@
 ---
-description:
-globs:
+description: 
+globs: src/app/*.tsx,src/components/**/*.tsx,tailwind.config.js
 alwaysApply: false
 ---
+---
+title: Frontend Development Guidelines
+description: Essential rules for project structure, component development, and styling.
+order: 0
+---
+
+# Frontend Development Guidelines
+
+Follow these guidelines for consistent and maintainable frontend code.
+
+## 1. File Placement - Key Locations
+
+-   **Global Styles & CSS Variables:**
+    -   `src/app/globals.css` (Tailwind layers, CSS custom properties like `var(--primary-bg)`, base component classes like `.btn-primary`)
+-   **Layouts & Pages (Next.js App Router):**
+    -   `src/app/layout.tsx` (Root layout, fonts)
+    -   `src/app/page.tsx` (And other `src/app/**/page.tsx` files)
+-   **Reusable Project-Specific UI Components:**
+    -   `src/components/*.tsx` (e.g., `src/components/Button.tsx`)
+    -   *Note: `components/ui/` houses generic/Shadcn-like components. Prefer `src/components/` for themed, project-specific UI.*
+-   **Utility Functions:**
+    -   `src/lib/utils.ts` (For project-specific helpers)
+-   **Static Assets:** `public/`
+
+## 2. Component Development
+
+-   **Naming:** `PascalCase` for files and components (e.g., `FeatureCard.tsx`).
+-   **Styling Priority:**
+    1.  **Tailwind CSS Utilities:** Primary method.
+    2.  **CSS Custom Properties:** From `src/app/globals.css` for theme colors (e.g., `bg-[color:var(--accent)]`).
+    3.  **Reusable CSS Classes:** Defined in `src/app/globals.css` (`@layer components`) for common patterns (e.g., `.card`, `.btn-primary`).
+    4.  **Conditional Classes:** Use `cn()` from `src/lib/utils.ts`.
+-   **Accessibility (A11y):** Use semantic HTML, provide `alt` text for images, ensure keyboard navigation and focus states.
+## 3. Tailwind CSS
+
+-   **Configuration:** `tailwind.config.js` (theme extensions, plugins).
+-   **Content Path:** Ensure `content` array in `tailwind.config.js` includes:
+    -   `'./src/app/**/*.{js,ts,jsx,tsx,mdx}'`
+    -   `'./src/components/**/*.{js,ts,jsx,tsx,mdx}'`
+    -   *(add `'./components/**/*.{js,ts,jsx,tsx,mdx}'` if root components are actively used with Tailwind)*
+
+## 4. CSS Custom Properties (Variables)
+
+-   Core theme variables (bg, text, accent colors) are in `:root` within `src/app/globals.css`.
+-   Reference in Tailwind: `text-[color:var(--your-variable)]`.
+
+## 5. Icons
+-   Use `lucide-react` library. Example: `<ArrowRight className="h-5 w-5" />`.
+
+---
+### Relevant Project Files (Globs)
+- Global Styles: `src/app/globals.css`
+- Tailwind Config: `tailwind.config.js`
+- Root Layout (fonts): `src/app/layout.tsx`
+- Project Components: `src/components/**/*.tsx`
+- Generic UI Components: `components/ui/**/*.tsx`
+- Page Examples: `src/app/**/page.tsx`
+- Project Utilities: `src/lib/utils.ts`
+

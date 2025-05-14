@@ -1,5 +1,39 @@
 ---
-description:
-globs:
+description: 
+globs: src/app/*.tsx,src/components/**/*.tsx,tailwind.config.js
 alwaysApply: false
 ---
+---
+title: MarketFlow.VIP Design System
+description: Core principles, frontend guidelines, and visual identity for the MarketFlow.VIP landing page.
+---
+
+# MarketFlow.VIP Design System Overview
+
+Welcome to the design system for the MarketFlow.VIP landing page. This system is built upon Next.js, TypeScript, and Tailwind CSS, emphasizing a clean, modern dark-theme aesthetic inspired by DesignJoy, with a focus on clear typography, consistent spacing, and high-conversion principles.
+
+The design prioritizes:
+- Fully responsive design for all breakpoints.
+- Modern theme (primarily light in current implementation) with carefully crafted typography and spacing.
+- Clean, readable UI with strong visual hierarchy.
+- High-conversion optimized CTAs and content flow.
+
+## Core Documentation
+
+Navigate through the sections to understand different aspects of our design language:
+
+- [**Frontend Development Guidelines**](./00-frontend-guidelines.mdc) - **START HERE** for file structure, naming, and coding practices.
+- [**Visual Identity**](./01-visual-identity.mdc) - Typography, color palette, spacing.
+- [**Responsive Design**](./02-responsive-design.mdc) - Breakpoints and adaptations.
+- [**Animation & Interaction**](./03-animation-interaction.mdc) - Micro-interactions and motion.
+- [**Content Style**](./04-content-style.mdc) - Imagery, tone of voice.
+- [**Special Design Patterns**](./05-special-patterns.mdc) - Key UI patterns like Hero, Cards, etc.
+
+## Implementation Philosophy
+
+When implementing or extending this design system:
+- **Prioritize `src/app/globals.css`:** This file is the source of truth for core CSS custom properties (variables) and base component styling (`@layer components`).
+- **Leverage Tailwind CSS:** Utilize utility classes for most styling needs.
+- **Reusable Components:** Build and use components from `src/components/` for consistent UI.
+- **Accessibility:** Ensure all components and content are accessible (semantic HTML, ARIA attributes).
+- **Consistency:** Maintain consistency in spacing, typography, and color usage across all new development.

@@ -1,5 +1,39 @@
 ---
-description:
-globs:
+description: 
+globs: src/app/*.tsx,src/components/**/*.tsx,tailwind.config.js
 alwaysApply: false
 ---
+---
+title: Animation & Interaction Quick Reference
+description: Principles for micro-interactions and motion.
+order: 3
+---
+
+# Animation & Interaction Quick Reference
+
+Animations should be subtle and purposeful.
+
+## 1. Micro-interactions & Transitions
+
+-   **Hover Effects:** Primarily color/shadow changes.
+    -   Buttons/Cards: See `.btn-primary:hover`, `.feature-card:hover` in `globals.css` or component definitions.
+    -   Hero Card: `rotate-2 hover:rotate-0 transition-all duration-500`.
+-   **Transition Speed:** Default `transition-colors` (Buttons), `duration-300` or `duration-500`. Aim for `0.2s-0.3s`.
+-   **Focus States:** Ensure clear `focus-visible:` styles (see Button components).
+
+## 2. Page Load & Custom Animations
+
+-   `page.tsx` uses `animate-pulse` (Tailwind) and references `animate-slide-up`, `animate-slide-in-right`.
+-   **Custom Animations:** Define keyframes and animation utilities in `tailwind.config.js` (`theme.extend.keyframes` and `theme.extend.animation`).
+    -   *Ensure `animate-slide-up` etc. are defined if used.*
+-   The `tailwindcss-animate` plugin provides `accordion-down`/`up` animations.
+
+## 3. Scroll Behavior
+-   `scroll-smooth` is applied to `html` in `src/app/globals.css`.
+
+---
+### Relevant Project Files (Globs)
+- Tailwind Animation Config: `tailwind.config.js`
+- Tailwind Animate Plugin: `tailwind.config.js` (plugins section)
+- Usage Examples: `src/app/page.tsx`
+- Transition Utilities in Global Styles: `src/app/globals.css`

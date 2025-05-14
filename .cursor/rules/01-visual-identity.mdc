@@ -1,5 +1,69 @@
 ---
-description:
-globs:
+description: 
+globs: src/app/*.tsx,src/components/**/*.tsx,tailwind.config.js
 alwaysApply: false
 ---
+---
+title: Visual Identity Quick Reference
+description: Core typography, color palette, spacing, and UI elements.
+order: 1
+---
+
+# Visual Identity Quick Reference
+
+Key visual elements for MarketFlow.VIP.
+
+## 1. Typography
+
+-   **Primary Font:** `Figtree` (sans-serif)
+    -   Weights: `400` (Regular), `500` (Medium), `600` (Semibold), `700` (Bold).
+    -   Setup: `src/app/layout.tsx` (imported via `next/font/google`).
+-   **Base Styles:** Defined in `src/app/globals.css` for `h1-h6`, `p`.
+    -   H1: `text-4xl md:text-5xl lg:text-6xl font-semibold`
+    -   H2: `text-2xl md:text-3xl font-semibold`
+    -   P: `text-base lg:text-lg font-normal`
+-   **Italic Highlight:** `.italic-highlight` (uses `var(--accent)`).
+
+## 2. Color Palette
+
+-   **Primary Source:** CSS Custom Properties in `src/app/globals.css` (`:root`).
+    -   `--primary-bg`: `oklch(0.99 0.003 240)` (Main background)
+    -   `--primary-text`: `oklch(0.25 0.015 240)` (Main text)
+    -   `--secondary-text`: `oklch(0.45 0.01 240)`
+    -   `--accent`: `oklch(0.65 0.18 155)` (Primary accent, e.g., CTAs)
+    -   `--accent-light`: `oklch(0.75 0.15 155)` (Accent hover)
+-   **Usage:** `className="bg-[color:var(--accent)]"`
+-   **Tailwind Named Colors:** Additional specific colors (e.g., `gray-50`, `emerald-500`) defined in `tailwind.config.js` are available for non-thematic use.
+## 3. Spacing & Layout
+
+-   **Core Spacing Unit:** Tailwind's spacing scale (multiples of `0.25rem`).
+-   **Key Classes (from `globals.css` & `page.tsx`):**
+    -   `.container-custom`: `max-w-6xl mx-auto px-4 sm:px-6 lg:px-8`
+    -   `.section-spacing`: `py-16 md:py-24`
+-   **Gaps:** Common: `gap-4` (16px), `gap-8` (32px).
+
+## 4. UI Elements
+
+-   **Cards:**
+    -   `.card`: Base style (`bg-white p-6 md:p-8 rounded-lg shadow-sm border border-gray-100`).
+    -   `.feature-card`: Similar to `.card` with hover enhancements.
+    -   See `src/app/globals.css` for definitions.
+-   **Buttons:**
+    -   **CSS Classes (for links/simple buttons):**
+        -   `.btn-primary`: `bg-[color:var(--accent)] text-white ...`
+        -   `.btn-secondary`: `bg-white border text-[color:var(--primary-text)] ...`
+    -   **React Component (for interactive buttons):**
+        -   `<Button />` from `src/components/Button.tsx`. Variants: `default`, `outline`, `ghost`, `link`. Sizes: `default`, `sm`, `lg`.
+-   **Icons:** `lucide-react`. Sized via Tailwind (e.g., `h-5 w-5`). Color via `text-[color:var(--accent)]` or `text-gray-XXX`.
+-   **Rounded Corners:** `rounded-md`, `rounded-lg`, `rounded-full`.
+    -   *Note: `tailwind.config.js` defines `var(--radius)` but it's not set in `globals.css`. Prefer explicit Tailwind classes (`rounded-lg`) or define `--radius`.*
+-   **Badges:** `.badge` class for small highlights (uses `var(--accent)`).
+
+---
+### Relevant Project Files (Globs)
+- Core Styles & CSS Variables: `src/app/globals.css`
+- Font Setup: `src/app/layout.tsx`
+- Tailwind Color/Theme Extensions: `tailwind.config.js`
+- Button Component: `src/components/Button.tsx`
+- Usage Examples: `src/app/page.tsx` (and other pages)
+

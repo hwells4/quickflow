@@ -1,5 +1,32 @@
 ---
-description:
-globs:
+description: 
+globs: src/app/*.tsx,src/components/**/*.tsx,tailwind.config.js
 alwaysApply: false
 ---
+---
+title: Content Style Quick Reference
+description: Brief guidelines for imagery and tone.
+order: 4
+---
+
+# Content Style Quick Reference
+
+## 1. Imagery & Icons
+
+-   **Icons:** Use `lucide-react` library for simple, clean line icons.
+-   **General Imagery:** (If used) Clean, minimal, with ample surrounding space. Use Next.js `<Image>`.
+
+## 2. Tone & Voice
+
+-   **Professional, direct, benefit-oriented, confident.**
+-   Use `.italic-highlight` (with `var(--accent)`) for emphasis.
+-   Refer to copy in `src/app/page.tsx` for examples.
+
+## 3. Structure
+-   Clear sections with `<h2>` titles. Use lists for features/benefits.
+-   Prioritize scannability.
+
+---
+### Relevant Project Files (Globs)
+- Icon Usage & Copy Examples: `src/app/**/page.tsx`
+- Italic Highlight Style: `src/app/globals.css`
