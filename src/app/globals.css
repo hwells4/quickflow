@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary/neutral: 60% */
+  --primary-bg: oklch(0.99 0.003 240);
+  --primary-text: oklch(0.25 0.015 240);
+  --secondary-text: oklch(0.45 0.01 240);
+  
+  /* Accent/brand: 10% */
+  --accent: oklch(0.65 0.18 155);
+  --accent-light: oklch(0.75 0.15 155);
+  --accent-text: oklch(0.98 0.01 155);
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, var(--accent) 0%, oklch(0.68 0.15 180) 100%);
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-[color:var(--primary-bg)] text-[color:var(--primary-text)] font-sans;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold leading-tight;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+  
+  h2 {
+    @apply text-2xl md:text-3xl font-semibold;
+  }
+  
+  p {
+    @apply text-base lg:text-lg font-normal;
+  }
+  
+  .italic-highlight {
+    @apply italic text-[color:var(--accent)];
+  }
+  
+  .container-custom {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl;
+  }
+  
+  .section-spacing {
+    @apply py-16 md:py-24;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[color:var(--accent)] hover:bg-[color:var(--accent-light)] text-white 
+    font-semibold py-3 px-6 rounded-md transition-all duration-300 inline-block;
+  }
+  
+  .btn-secondary {
+    @apply bg-white border border-gray-300 hover:border-gray-400 text-[color:var(--primary-text)] 
+    font-semibold py-3 px-6 rounded-md transition-all duration-300 inline-block;
+  }
+  
+  .card {
+    @apply bg-white p-6 md:p-8 rounded-lg shadow-sm border border-gray-100;
+  }
+  
+  .feature-card {
+    @apply p-6 bg-white rounded-lg border border-gray-100 transition-all duration-300
+    hover:shadow-md hover:border-gray-200;
+  }
+  
+  .grid-card {
+    @apply flex flex-col h-full;
+  }
+  
+  .service-pill {
+    @apply inline-block bg-gray-100 text-[color:var(--primary-text)] px-4 py-2 rounded-full 
+    text-sm font-medium m-1;
+  }
+  
+  .faq-item {
+    @apply py-6 border-b border-gray-200;
+  }
+  
+  .section-title {
+    @apply mb-12 text-center;
+  }
+  
+  .grid-line {
+    @apply absolute hidden lg:block w-px h-full bg-gray-100 opacity-50;
+  }
+  
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium
+    bg-[color:var(--accent)] bg-opacity-10 text-[color:var(--accent)];
+  }
+} 
