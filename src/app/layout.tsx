@@ -22,7 +22,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={figtree.variable}>
-      <body className="min-h-screen">
+      <body className="min-h-screen bg-brand-white text-brand-black">
+        {/* 
+          Consider adding a <main> element here with a class like "container-custom" 
+          if you want a consistent max-width and padding for all pages by default.
+          e.g., <main className="container-custom">{children}</main>
+          Alternatively, each page can manage its own container.
+        */}
         {children}
       </body>
     </html>

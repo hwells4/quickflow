@@ -1,0 +1,26 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100" height="100" rx="20" fill="#EEF1FF" />
+  
+  <!-- Brain icon -->
+  <path d="M50 20C36.7 20 26 30.7 26 44C26 52.5 30.5 59.9 37.3 64H62.7C69.5 59.9 74 52.5 74 44C74 30.7 63.3 20 50 20Z" fill="#6C47ED" />
+  <path d="M45 64V75C45 77.2 46.8 79 49 79H51C53.2 79 55 77.2 55 75V64H45Z" fill="#4D61FC" />
+  
+  <!-- Circuit lines in brain -->
+  <path d="M40 35H60" stroke="white" stroke-width="2" stroke-linecap="round" />
+  <path d="M45 45H55" stroke="white" stroke-width="2" stroke-linecap="round" />
+  <path d="M35 55H65" stroke="white" stroke-width="2" stroke-linecap="round" />
+  
+  <!-- Nodes in brain -->
+  <circle cx="40" cy="35" r="3" fill="#3CCFCF" />
+  <circle cx="60" cy="35" r="3" fill="#3CCFCF" />
+  <circle cx="45" cy="45" r="3" fill="#00BA88" />
+  <circle cx="55" cy="45" r="3" fill="#00BA88" />
+  <circle cx="35" cy="55" r="3" fill="#F7B955" />
+  <circle cx="65" cy="55" r="3" fill="#F7B955" />
+  
+  <!-- Search/optimization graphic -->
+  <circle cx="75" cy="75" r="10" stroke="#4D61FC" stroke-width="2" />
+  <path d="M82 82L88 88" stroke="#4D61FC" stroke-width="2" stroke-linecap="round" />
+  <path d="M75 71V79" stroke="#1A1D21" stroke-width="2" stroke-linecap="round" />
+  <path d="M71 75H79" stroke="#1A1D21" stroke-width="2" stroke-linecap="round" />
+</svg> 
