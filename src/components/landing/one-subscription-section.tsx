@@ -4,7 +4,7 @@ import DesignJoyShadow from '@/src/components/ui/DesignJoyShadow';
 
 const features = [
   {
-    icon: <Repeat className="h-7 w-7 text-[color:var(--accent)]" />,
+    icon: <Repeat className="h-7 w-7 text-primary" />,
     title: 'Unlimited custom workflows',
     description: 'Built specifically for your business',
     bgColorClass: 'bg-green-500/10 dark:bg-green-500/20',
@@ -12,7 +12,7 @@ const features = [
     accentClass: 'from-green-400 to-green-600'
   },
   {
-    icon: <RefreshCw className="h-7 w-7 text-[color:var(--accent)]" />,
+    icon: <RefreshCw className="h-7 w-7 text-primary" />,
     title: 'Unlimited executions',
     description: 'Run your automations as often as needed',
     bgColorClass: 'bg-blue-500/10 dark:bg-blue-500/20',
@@ -20,7 +20,7 @@ const features = [
     accentClass: 'from-blue-400 to-blue-600'
   },
   {
-    icon: <BotIcon className="h-7 w-7 text-[color:var(--accent)]" />,
+    icon: <BotIcon className="h-7 w-7 text-primary" />,
     title: 'Unlimited AI usage',
     description: 'All credits included in your subscription',
     bgColorClass: 'bg-purple-500/10 dark:bg-purple-500/20',
@@ -28,7 +28,7 @@ const features = [
     accentClass: 'from-purple-400 to-purple-600'
   },
   {
-    icon: <Layers className="h-7 w-7 text-[color:var(--accent)]" />,
+    icon: <Layers className="h-7 w-7 text-primary" />,
     title: 'Unlimited integrations',
     description: 'With your existing marketing stack',
     bgColorClass: 'bg-sky-500/10 dark:bg-sky-500/20',
@@ -36,7 +36,7 @@ const features = [
     accentClass: 'from-sky-400 to-sky-600'
   },
   {
-    icon: <Bell className="h-7 w-7 text-[color:var(--accent)]" />,
+    icon: <Bell className="h-7 w-7 text-primary" />,
     title: '24/7 monitoring',
     description: 'For complete peace of mind',
     bgColorClass: 'bg-yellow-500/10 dark:bg-yellow-500/20',
@@ -44,7 +44,7 @@ const features = [
     accentClass: 'from-yellow-400 to-yellow-600'
   },
   {
-    icon: <Shield className="h-7 w-7 text-[color:var(--accent)]" />,
+    icon: <Shield className="h-7 w-7 text-primary" />,
     title: 'Technical maintenance',
     description: 'No coding or server management',
     bgColorClass: 'bg-rose-500/10 dark:bg-rose-500/20',

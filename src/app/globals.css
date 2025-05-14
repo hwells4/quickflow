@@ -5,62 +5,62 @@
 @tailwind utilities;
 
 :root {
-  /* QuickFlow Brand Identity - OKLCH Based */
-  --brand-quickflow-blue: lch(38.5% 0.24 278.5); /* User's preferred #3B4FDC */
-  --brand-quickflow-purple-accent: lch(45% 0.26 290); /* For badge flash & highlights */
-  --brand-quickflow-teal-support: lch(45% 0.1 210); /* Trust/Reliability supporting accent */
+  /* QuickFlow Brand Identity - New Color Scheme */
+  --brand-quickflow-blue: #6a67ef; /* User's requested purple-blue */
+  --brand-quickflow-purple-accent: #9d7fea; /* Lighter purple accent */
+  --brand-quickflow-teal-support: #34d6c8; /* Teal support color for contrast */
 
-  /* Core Palette (OKLCH for Modernity & Accessibility) */
-  --color-background: lch(98.5% 0.003 240); /* Base page background - very light, cool gray */
-  --color-foreground: lch(15% 0.01 240);   /* Base text color - very dark, desaturated cool gray */
+  /* Core Palette */
+  --color-background: lch(98.5% 0.003 240); /* Base page background - keeping as requested */
+  --color-foreground: #252340;   /* Darker purple-blue for text */
   
   --color-card: lch(100% 0 0); /* Card background - pure white for pop */
   --color-card-foreground: var(--color-foreground);
 
-  --color-muted: lch(92% 0.007 240);          /* Muted backgrounds, subtle elements */
-  --color-muted-foreground: lch(40% 0.015 240); /* Muted text */
+  --color-muted: #f5f5fa;          /* Muted backgrounds with slight purple tint */
+  --color-muted-foreground: #5a5984; /* Muted text with purple tone */
 
-  --color-border: lch(88% 0.01 240);           /* Subtle borders */
-  --color-input: lch(95% 0.005 240);          /* Input field backgrounds */
+  --color-border: #e2e1f5;           /* Subtle borders with purple tint */
+  --color-input: #f9f9ff;          /* Input field backgrounds */
   --color-ring: var(--brand-quickflow-blue);    /* Focus rings */
 
-  /* Semantic Colors (Mapped to Tailwind config & shadcn/ui expectations) */
+  /* Semantic Colors */
   --color-primary: var(--brand-quickflow-blue);
-  --color-primary-foreground: lch(98% 0.01 280); /* Ensure high contrast text on primary */
+  --color-primary-foreground: #ffffff; /* White text on primary */
 
-  --color-secondary: var(--brand-quickflow-teal-support); /* Using teal as secondary for a calming, professional touch */
-  --color-secondary-foreground: lch(98% 0.01 210);
+  --color-secondary: var(--brand-quickflow-teal-support); /* Teal as secondary */
+  --color-secondary-foreground: #ffffff;
 
   --color-accent: var(--brand-quickflow-purple-accent);
-  --color-accent-foreground: lch(98% 0.01 290);
+  --color-accent-foreground: #ffffff;
   
-  --color-destructive: lch(55% 0.22 25); /* A clear, accessible red */
-  --color-destructive-foreground: lch(98% 0.01 25);
+  --color-destructive: #ff5a65; /* Bright, accessible red */
+  --color-destructive-foreground: #ffffff;
 
-  --color-success: lch(60% 0.18 150); /* A clear, accessible green */
-  --color-success-foreground: lch(98% 0.01 150);
+  --color-success: #3dd68c; /* Bright, accessible green */
+  --color-success-foreground: #ffffff;
   
-  --color-warning: lch(75% 0.2 80); /* A clear, accessible amber/yellow */
-  --color-warning-foreground: lch(20% 0.1 80);
+  --color-warning: #ffb547; /* Bright amber/yellow */
+  --color-warning-foreground: #2d2d2d;
 
-  --color-info: lch(70% 0.15 230); /* A clear, accessible blue for info */
-  --color-info-foreground: lch(98% 0.01 230);
+  --color-info: #4fc3f7; /* Bright blue for info */
+  --color-info-foreground: #ffffff;
 
-  /* Legacy/Tailwind Mappings (ensure compatibility with existing config) */
+  /* Legacy/Tailwind Mappings */
   --color-black: var(--color-foreground); /* Remap to new foreground */
-  --color-white: lch(100% 0 0);
+  --color-white: #ffffff;
   --color-off-white: var(--color-background); /* Remap to new background */
   --color-light-gray: var(--color-muted);    /* Remap to new muted */
   
   --color-primary-accent: var(--color-primary);    /* From existing globals, now mapped */
   --color-secondary-accent: var(--color-accent); /* From existing globals, now mapped */
-  --color-tertiary-accent: var(--brand-quickflow-teal-support); /* Can be a distinct teal */
+  --color-tertiary-accent: var(--brand-quickflow-teal-support); /* Teal tertiary */
 
-  --color-soft-blue: lch(94% 0.03 278.5); /* Softer version of primary */
-  --color-soft-teal: lch(94% 0.02 210);  /* Softer version of teal */
-  --color-soft-purple: lch(94% 0.03 290); /* Softer version of accent purple */
+  --color-soft-blue: #e4e3fc; /* Softer version of primary */
+  --color-soft-teal: #d9f9f7;  /* Softer version of teal */
+  --color-soft-purple: #eee6ff; /* Softer version of accent purple */
   
-  --color-brand-black: lch(10% 0.01 240); /* For very dark sections, e.g. footer */
+  --color-brand-black: #1a1833; /* Deep purple-blue for very dark sections */
 
   /* Typography */
   --font-primary: var(--font-figtree); /* From layout.tsx */
@@ -99,11 +99,11 @@
   --shadow-inner: inset 0 2px 4px 0 lch(0% 0 0 / 0.03);
 
   /* Added CSS variables for the pricing section design */
-  --primary-bg: lch(98.5% 0.003 240);
-  --primary-text: lch(15% 0.01 240);
-  --secondary-text: lch(40% 0.01 240);
+  --primary-bg: var(--color-background);
+  --primary-text: var(--color-foreground);
+  --secondary-text: var(--color-muted-foreground);
   --accent: var(--color-primary);
-  --accent-light: lch(50% 0.24 278.5);
+  --accent-light: #8e8bf4; /* Lighter version of primary */
 }
 
 @layer base {
@@ -240,7 +240,7 @@
 }
 
 @layer components {
-  /* Base Button Style - ensure it uses new variables and Tailwind focus-visible */
+  /* Base Button Style */
   .btn {
     @apply inline-flex items-center justify-center font-semibold 
            text-base 
@@ -248,31 +248,87 @@
            rounded-[var(--rounded-corners-medium)] 
            transition-all duration-200 ease-in-out 
            focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--color-ring)] focus-visible:ring-offset-[var(--color-background)];
-    /* Removed fixed text-[15px] from original .btn to allow for more flexible button text sizing if needed */
+    color: inherit; /* Fallback to ensure text is always visible */
   }
 
   .btn-primary {
-    @apply btn bg-[var(--color-primary)] text-[var(--color-primary-foreground)] hover:opacity-90 active:opacity-80;
-    /* Example of a subtle transform on hover/active for "pop" */
-    /* @apply hover:scale-[1.03] active:scale-[0.98]; */
+    @apply btn bg-[var(--color-primary)] text-white hover:opacity-90 active:opacity-80;
+    color: white; /* Explicit color override */
   }
   
   .btn-secondary {
     @apply btn bg-transparent text-[var(--color-primary)] border-2 border-[var(--color-primary)] 
-           hover:bg-[var(--color-soft-blue)] hover:border-[var(--color-primary)]
-           active:bg-lch(from var(--color-soft-blue) l c h / 0.7);
+           hover:bg-[var(--color-soft-blue)] hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]
+           active:bg-[var(--color-soft-blue)];
+    /* Ensuring text color is explicitly set */
+    color: var(--color-primary);
   }
 
   .btn-accent {
-    @apply btn bg-[var(--color-accent)] text-[var(--color-accent-foreground)] hover:opacity-90 active:opacity-80;
+    @apply btn bg-[var(--color-accent)] text-white hover:opacity-90 active:opacity-80;
+    color: white; /* Explicit color override */
   }
 
   .btn-ghost {
-    @apply btn bg-transparent text-[var(--color-primary)] hover:bg-[var(--color-soft-blue)] active:bg-lch(from var(--color-soft-blue) l c h / 0.7);
+    @apply btn bg-transparent text-[var(--color-primary)] hover:bg-[var(--color-soft-blue)] hover:text-[var(--color-primary)] active:bg-[var(--color-soft-blue)];
+    color: var(--color-primary); /* Explicit color */
   }
 
   .btn-link {
     @apply text-[var(--color-primary)] hover:text-[var(--color-accent)] hover:underline font-medium;
+    color: var(--color-primary); /* Explicit color */
+  }
+  
+  /* For buttons implemented via the Button component */
+  button[class*="bg-[color:var(--accent)]"], 
+  a[class*="bg-[color:var(--accent)]"] {
+    color: white !important; /* Ensure text is visible on accent-colored buttons */
+  }
+
+  button[class*="bg-[color:var(--primary)]"], 
+  a[class*="bg-[color:var(--primary)]"] {
+    color: white !important; /* Ensure text is visible on primary-colored buttons */
+  }
+  
+  /* Handle Tailwind dynamic classes */
+  button[class*="bg-[var(--color-primary)]"],
+  a[class*="bg-[var(--color-primary)]"] {
+    color: white !important;
+  }
+  
+  button[class*="bg-[var(--color-accent)]"],
+  a[class*="bg-[var(--color-accent)]"] {
+    color: white !important;
+  }
+  
+  button[class*="bg-[var(--color-secondary)]"],
+  a[class*="bg-[var(--color-secondary)]"] {
+    color: white !important;
+  }
+
+  /* Adding explicit contrast for other button variants */
+  button[class*="variant-default"], 
+  a[class*="variant-default"] {
+    color: white !important;
+  }
+
+  button[class*="variant-outline"], 
+  a[class*="variant-outline"] {
+    color: var(--color-primary) !important;
+  }
+  
+  /* Make sure all buttons with dynamic background colors have correct text color */
+  button[class*="bg-["],
+  a[class*="bg-["] {
+    color: white !important;
+  }
+  
+  /* Only apply to colored buttons, not white/transparent ones */
+  button[class*="bg-white"],
+  a[class*="bg-white"],
+  button[class*="bg-transparent"],
+  a[class*="bg-transparent"] {
+    color: var(--color-primary) !important;
   }
   
   /* Card Component - with new variables */
@@ -380,4 +436,175 @@
 
 .animate-float-slow {
   animation: float-slow 15s ease-in-out infinite;
+}
+
+/* Make sure text has proper contrast */
+.text-\[color\:var\(--accent\)\] {
+  color: var(--color-primary) !important; /* Ensure high contrast */
+}
+
+.text-\[color\:var\(--accent-light\)\] {
+  color: var(--accent-light) !important; /* Ensure visibility */
+}
+
+/* Make sure all buttons with color accents have visible text - FOCUSED FIXES */
+.btn-primary, 
+button.bg-\[var\(--color-primary\)\],
+a.bg-\[var\(--color-primary\)\],
+button.bg-\[var\(--brand-quickflow-blue\)\],
+a.bg-\[var\(--brand-quickflow-blue\)\],
+button.bg-\[#6a67ef\],
+a.bg-\[#6a67ef\] {
+  color: white !important;
+}
+
+/* Specific fix for white text on purple background */
+.bg-\[var\(--color-primary\)\] button,
+.bg-\[var\(--brand-quickflow-blue\)\] button,
+.bg-\[#6a67ef\] button,
+.bg-\[var\(--color-primary\)\] a,
+.bg-\[var\(--brand-quickflow-blue\)\] a,
+.bg-\[#6a67ef\] a {
+  color: white !important;
+}
+
+/* Specific fix for buttons in call-to-action components */
+[class*="ready-to-get-started"] button,
+[class*="cta"] button {
+  color: white !important;
+}
+
+/* Preventing transparent text in color transitions */
+a, button, [role="button"] {
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Fix hover states without nesting */
+a:hover, a:focus, a:active,
+button:hover, button:focus, button:active,
+[role="button"]:hover, [role="button"]:focus, [role="button"]:active {
+  color: currentColor;
+}
+
+/* Book a call button in purple box - very specific fix */
+.bg-\[#6a67ef\] a,
+.bg-\[var\(--color-primary\)\] a,
+.bg-\[var\(--brand-quickflow-blue\)\] a {
+  color: white !important;
+}
+
+/* Very specific selectors for the buttons seen in screenshots */
+a[class*="Book a"],
+/* Removing unsupported :has selectors */
+a.bg-\[#6a67ef\],
+a.bg-\[var\(--color-primary\)\],
+.bg-\[#6a67ef\] a[class*="Book a 15-min"],
+.purple a,
+.bg-purple a,
+[class*="cta-box"] a,
+[class*="faq"] .bg-\[#6a67ef\] a,
+[class*="ready"] .bg-\[#6a67ef\] a {
+  color: white !important;
+}
+
+/* New selectors specifically for Book a call buttons and Go to buttons */
+a:where([href*="book"], [href*="call"], [href*="contact"]),
+button:where([type="submit"]),
+a.rounded-full.bg-white,
+/* Go to buttons */
+a:where([href*="go-to"], [href*="goto"]),
+/* Buttons in purple areas */
+.bg-\[#6a67ef\] a,
+.bg-\[var\(--brand-quickflow-blue\)\] a,
+.bg-\[var\(--color-primary\)\] a,
+/* Specific CSS for buttons in FAQ sections */
+.faq a.bg-\[#6a67ef\],
+.faq-section a.bg-\[#6a67ef\],
+.faq a.bg-\[var\(--color-primary\)\],
+.faq-section a.bg-\[var\(--color-primary\)\] {
+  color: white !important;
+}
+
+/* Direct targeting for white buttons on purple backgrounds */
+div[style*="background-color:#6a67ef"] a,
+div[style*="background-color: #6a67ef"] a,
+div[style*="background:#6a67ef"] a,
+div[style*="background: #6a67ef"] a {
+  color: white !important;
+}
+
+/* Ensure all buttons with this shade of purple have white text */
+button[style*="background-color:#6a67ef"],
+button[style*="background: #6a67ef"],
+a[style*="background-color:#6a67ef"],
+a[style*="background: #6a67ef"] {
+  color: white !important;
+}
+
+/* Ensure text is always visible in key UI components */
+.card {
+  color: var(--color-foreground);
+}
+.card h1, .card h2, .card h3, .card h4, .card h5, .card h6 {
+  color: var(--color-foreground);
+}
+
+/* Final catch-all for any colored buttons with inline styles */
+button[style*="background"]:not([style*="background: transparent"]):not([style*="background: white"]):not([style*="background: #fff"]):not([style*="background-color: transparent"]):not([style*="background-color: white"]):not([style*="background-color: #fff"]),
+a[role="button"][style*="background"]:not([style*="background: transparent"]):not([style*="background: white"]):not([style*="background: #fff"]):not([style*="background-color: transparent"]):not([style*="background-color: white"]):not([style*="background-color: #fff"]),
+.btn[style*="background"]:not([style*="background: transparent"]):not([style*="background: white"]):not([style*="background: #fff"]):not([style*="background-color: transparent"]):not([style*="background-color: white"]):not([style*="background-color: #fff"]) {
+  color: white !important;
+}
+
+/* Button Component - Simpler approach for FAQ buttons */
+
+/* For the component "Book a 15-min intro call" button */
+a:where([href*="book"], [href*="call"], [href*="intro"]) {
+  color: white !important;
+}
+
+/* Catch all for components with book a call labels */
+a:where([href*="book"]),
+a:where([href*="meeting"]),
+a:where([href*="register"]) {
+  color: white !important;
+}
+
+/* Bottom fix - add simple and direct fixes for component library buttons */
+/* This is the most specific fix for the screenshots shown */
+.rounded-md.bg-\[#6a67ef\],
+.rounded-md.bg-\[var\(--color-primary\)\],
+.rounded-md.bg-\[var\(--brand-quickflow-blue\)\],
+a.rounded-md.bg-\[#6a67ef\],
+a.rounded-md.bg-\[var\(--color-primary\)\],
+a.rounded-md.bg-\[var\(--brand-quickflow-blue\)\] {
+  color: white !important;
+}
+
+/* Last resort - component library buttons */
+/* These match the button styles used in the specific component libraries */
+a.bg-\[#6a67ef\].rounded-md,
+a.bg-\[#6a67ef\].rounded-lg,
+a.bg-\[#6a67ef\].rounded-full,
+button.bg-\[#6a67ef\],
+a.bg-\[var\(--color-primary\)\].rounded-md,
+a.bg-\[var\(--color-primary\)\].rounded-lg,
+a.bg-\[var\(--color-primary\)\].rounded-full,
+button.bg-\[var\(--color-primary\)\] {
+  color: white !important;
+}
+
+/* Ensure text is always visible in key UI components */
+.card {
+  color: var(--color-foreground);
+}
+.card h1, .card h2, .card h3, .card h4, .card h5, .card h6 {
+  color: var(--color-foreground);
+}
+
+/* Final catch-all for any colored buttons with inline styles */
+button[style*="background"]:not([style*="background: transparent"]):not([style*="background: white"]):not([style*="background: #fff"]):not([style*="background-color: transparent"]):not([style*="background-color: white"]):not([style*="background-color: #fff"]),
+a[role="button"][style*="background"]:not([style*="background: transparent"]):not([style*="background: white"]):not([style*="background: #fff"]):not([style*="background-color: transparent"]):not([style*="background-color: white"]):not([style*="background-color: #fff"]),
+.btn[style*="background"]:not([style*="background: transparent"]):not([style*="background: white"]):not([style*="background: #fff"]):not([style*="background-color: transparent"]):not([style*="background-color: white"]):not([style*="background-color: #fff"]) {
+  color: white !important;
 } 

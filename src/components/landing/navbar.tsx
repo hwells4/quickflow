@@ -36,8 +36,14 @@ export const Navbar = () => {
           >
             Blog
           </Link>
-          <Button variant="default" size="default" asChild> {/* Default size is often better for nav CTA */}
-            <Link href="/contact">Get Started</Link>
+          <Button 
+            variant="default" 
+            size="default" 
+            asChild
+            className="text-white" // Add explicit text color
+            style={{ color: "white" }} // Double ensure with inline style
+          > 
+            <Link href="/contact" className="text-white">Get Started</Link>
           </Button>
         </div>
         <Button

@@ -56,10 +56,10 @@ export const FinalCtaSection = () => {
                 Schedule a quick, 15 minute guided tour through MarketFlow.
               </p>
               
-              <div className="bg-[color:var(--accent)] text-[color:var(--accent-foreground)] p-6 rounded-xl mb-8 shadow-lg">
+              <div className="bg-[color:var(--accent)] text-white p-6 rounded-xl mb-8 shadow-lg">
                 <p className="font-medium leading-relaxed">
                   MarketFlow is experiencing a high volume of bookings, so slots are limited. For faster service, email 
-                  <Link href="mailto:hello@marketflow.vip" className="font-semibold underline hover:text-white/80 transition-colors ml-1">
+                  <Link href="mailto:hello@marketflow.vip" className="font-semibold underline hover:text-white/80 transition-colors ml-1 text-white">
                     hello@marketflow.vip
                   </Link> for a same-day response.
                 </p>
@@ -89,10 +89,10 @@ export const FinalCtaSection = () => {
                     <p className="text-slate-400/90 dark:text-slate-500/90 italic">Booking Calendar Area</p>
                   </div>
                   <div className="flex justify-center gap-4 mt-8">
-                    <button className="px-6 py-2.5 bg-[color:var(--accent)] text-[color:var(--accent-foreground)] font-semibold rounded-md hover:bg-[color:var(--accent-light)] transition-colors shadow-md">
+                    <button className="px-6 py-2.5 bg-[color:var(--accent)] text-white font-semibold rounded-md hover:bg-[color:var(--accent-light)] transition-colors shadow-md">
                       15 min Call
                     </button>
-                    <button className="px-6 py-2.5 bg-slate-700/80 dark:bg-slate-600/80 text-slate-100 dark:text-white font-semibold rounded-md hover:bg-slate-600/90 dark:hover:bg-slate-500/90 transition-colors shadow-md">
+                    <button className="px-6 py-2.5 bg-slate-700/80 dark:bg-slate-600/80 text-white font-semibold rounded-md hover:bg-slate-600/90 dark:hover:bg-slate-500/90 transition-colors shadow-md">
                       Explore Docs
                     </button>
                   </div>

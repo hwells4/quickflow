@@ -41,8 +41,8 @@ export const FAQ = ({
     <section className="section-spacing bg-white">
       <div className="container-custom">
         <div className="text-center mb-[calc(var(--spacing-element)_*_2)]">
-          <h2 className="text-h2-mobile md:text-h2-desktop mb-element">{title}</h2>
-          <p className="text-body-mobile md:text-body-desktop text-brand-black/80 max-w-2xl mx-auto">{subtitle}</p>
+          <h2 className="text-h2-mobile md:text-h2-desktop mb-element text-foreground">{title}</h2>
+          <p className="text-body-mobile md:text-body-desktop text-muted-foreground max-w-2xl mx-auto">{subtitle}</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 relative">
@@ -58,7 +58,7 @@ export const FAQ = ({
                   onClick={() => toggleItem(faq.id)}
                   aria-expanded={openItemId === faq.id}
                 >
-                  <span className="font-medium text-lg">{faq.question}</span>
+                  <span className="font-medium text-lg text-foreground">{faq.question}</span>
                   <svg 
                     xmlns="http://www.w3.org/2000/svg" 
                     className={`h-5 w-5 text-[var(--color-primary-accent)] transition-transform duration-200 ${
@@ -73,7 +73,7 @@ export const FAQ = ({
                 </button>
                 {openItemId === faq.id && (
                   <div className="px-6 py-4 bg-white border-t border-brand-lightGray">
-                    <p className="text-body-mobile text-brand-black/80">{faq.answer}</p>
+                    <p className="text-body-mobile text-muted-foreground">{faq.answer}</p>
                   </div>
                 )}
               </div>
@@ -90,6 +90,7 @@ export const FAQ = ({
                 size="default"
                 className="w-full bg-white text-[var(--color-primary-accent)] hover:bg-white/90 transition-all"
                 onClick={() => window.location.href = ctaButtonLink}
+                style={{ color: "var(--color-primary-accent)" }} /* Explicit color override */
               >
                 {ctaButtonText}
               </Button>

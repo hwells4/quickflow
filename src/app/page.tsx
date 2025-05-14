@@ -38,8 +38,6 @@ import { HeroSection } from '@/src/components/landing/hero-section';
 import { OneSubscriptionSection } from '@/src/components/landing/one-subscription-section';
 import { AutomationLibrarySection } from '@/src/components/landing/automation-library-section';
 import { HowItWorksSection } from '@/src/components/landing/how-it-works-section';
-import { RequestInfoSection } from '@/src/components/landing/request-info-section';
-import { WhyChooseUsSection } from '@/src/components/landing/why-choose-us-section';
 import { FinalCtaSection } from '@/src/components/landing/final-cta-section';
 import { BentoCard, BentoGrid } from "@/src/components/ui/bento-grid";
 
@@ -142,9 +140,9 @@ export default function Home() {
         {/* Bento Grid Section */}
         <section className="py-12 md:py-16 lg:py-20 bg-background">
           <div className="container mx-auto px-4 md:px-6">
-            <h2 className="text-3xl md:text-4xl font-semibold text-center mb-4 text-foreground">
-              Your Custom AI Engine, Built By Us.
-            </h2>
+          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl mb-4 md:mb-6">
+            Ready-To-Use <span className="italic-highlight text-[color:var(--accent)]">Automation Library</span>
+          </h2>
             <p className="text-lg text-muted-foreground text-center mb-12 max-w-3xl mx-auto">
               Explore powerful automations we design, implement, and fully manage for your marketing success.
             </p>
@@ -162,12 +160,6 @@ export default function Home() {
 
         {/* How It Works Section - Modernized with cleaner steps */}
         <HowItWorksSection />
-
-        {/* Request Info Section */}
-        <RequestInfoSection />
-
-        {/* Why Choose Us Section */}
-        <WhyChooseUsSection />
 
         {/* Animated Testimonials Section */}
         <AnimatedTestimonialsBasic />
