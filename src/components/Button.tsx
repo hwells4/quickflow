@@ -7,9 +7,9 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: 'bg-[var(--color-primary-accent)] text-white hover:opacity-90',
+        default: 'bg-[var(--color-primary-accent)] text-white font-semibold hover:opacity-90',
         outline: 'border border-[var(--color-primary-accent)] bg-white text-[var(--color-primary-accent)] hover:bg-brand-lightGray',
-        accent: 'bg-[var(--color-secondary-accent)] text-white hover:opacity-90',
+        accent: 'bg-[var(--color-secondary-accent)] text-white font-semibold hover:opacity-90',
         ghost: 'hover:bg-brand-lightGray hover:text-[var(--color-primary-accent)] text-brand-black',
         link: 'text-[var(--color-primary-accent)] font-semibold underline-offset-4 hover:underline',
       },

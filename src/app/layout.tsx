@@ -1,7 +1,9 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import { Figtree } from 'next/font/google';
+import { cn } from '@/lib/utils';
 import './globals.css';
+import DepthShadowBackground from '@/src/components/landing/DepthShadowBackground';
 
 const figtree = Figtree({
   subsets: ['latin'],
@@ -11,8 +13,8 @@ const figtree = Figtree({
 });
 
 export const metadata: Metadata = {
-  title: 'MarketFlow.VIP | AI Marketing Automation',
-  description: 'We build, host, and manage all your AI marketing workflows for one flat monthly fee.',
+  title: 'QuickFlow | Effortless AI Automation for Agencies',
+  description: 'QuickFlow empowers marketing agencies to scale with bespoke AI automation solutions. Effortless expertise, reliable results.',
 };
 
 export default function RootLayout({
@@ -21,15 +23,34 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={figtree.variable}>
-      <body className="min-h-screen bg-brand-white text-brand-black">
-        {/* 
-          Consider adding a <main> element here with a class like "container-custom" 
-          if you want a consistent max-width and padding for all pages by default.
-          e.g., <main className="container-custom">{children}</main>
-          Alternatively, each page can manage its own container.
-        */}
-        {children}
+    <html lang="en" className={cn('scroll-smooth', figtree.variable)} suppressHydrationWarning>
+      <body 
+        className={cn(
+          'min-h-screen font-primary antialiased'
+          // Body will use var(--color-background) from globals.css
+        )}
+      >
+        {/* Mimicking demo structure: A parent div with relative positioning and overflow-hidden */}
+        <div className="relative min-h-screen overflow-hidden">
+          <DepthShadowBackground 
+            className="absolute inset-0 z-0" // Component is designed to be absolute within a relative parent
+            primaryColor="#ede6e8"
+            secondaryColor="#ede6e8"
+            tertiaryColor="#ede6e8"
+            intensity="medium"
+            pattern="corners"
+          />
+          
+          {/* Content wrapper: relative, z-1, and scrolls independently */}
+          <div className="relative z-[1] flex flex-col min-h-screen h-screen overflow-y-auto">
+            {/* 
+              Flex-grow might be needed on a main content area *within* children 
+              if there's a fixed header/footer also within this scrolling div.
+              For now, this div itself is the main scrolling container for the page content.
+            */}
+            {children}
+          </div>
+        </div>
       </body>
     </html>
   );

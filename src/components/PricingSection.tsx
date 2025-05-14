@@ -3,114 +3,134 @@ import Link from 'next/link';
 import { 
   ArrowRight, 
   CheckCircle2, 
-  Clock, 
   Zap, 
-  LineChart, 
   Shield,
-  Repeat,
   RefreshCw,
   BotIcon,
   Layers,
+  Clock,
+  LineChart,
   Server
 } from 'lucide-react';
 import { Button } from './Button';
+import DesignJoyShadow from '@/src/components/ui/DesignJoyShadow';
+import { cn } from '@/src/lib/utils';
 
 export const PricingSection = () => {
   return (
-    <section id="pricing" className="section-spacing bg-gradient-to-b from-[#f8f9fa] to-white relative overflow-hidden">
+    <section 
+      id="pricing" 
+      className="section-spacing bg-white/80 backdrop-blur-md relative overflow-hidden"
+    >
+      {/* Background decorative elements */}
+      <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-bl from-brand-softBlue/20 to-transparent rounded-bl-full"></div>
+      <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-brand-softBlue/20 to-transparent rounded-tr-full"></div>
+      
       <div className="container-custom relative z-10">
         <div className="text-center mb-[calc(var(--spacing-element)_*_2)] animate-slide-up">
-          <h2 className="text-h2-mobile md:text-h2-desktop mb-element">
-            One subscription, <span className="italic font-normal text-[#4D61FC]">endless possibilities</span>
+          <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-brand-softBlue rounded-full text-sm font-medium text-[var(--color-primary-accent)] mb-4">
+            <Zap className="h-4 w-4" />
+            <span>Simple Pricing</span>
+          </span>
+          <h2 className="text-h2-mobile md:text-h2-desktop mb-4">
+            One subscription, <span className="italic-highlight">endless possibilities</span>
           </h2>
+          <p className="text-body-mobile md:text-body-desktop text-brand-black/80 max-w-2xl mx-auto">
+            A transparent, all-inclusive plan with no hidden fees or usage limits.
+          </p>
         </div>
         
-        <div className="max-w-5xl mx-auto grid md:grid-cols-12 gap-8">
-          {/* Colorful Card - Left Side */}
-          <div className="md:col-span-5 bg-gradient-to-br from-pink-400 via-orange-400 to-[#4D61FC] p-6 rounded-3xl relative overflow-hidden animate-float shadow-xl">
-            <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-yellow-400 rounded-full opacity-70"></div>
-            <div className="absolute top-12 left-12 w-16 h-16 bg-[#4D61FC] rounded-full opacity-70"></div>
-            
-            <div className="relative z-10 h-full flex flex-col">
-              <div className="bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full w-fit mb-auto">
-                MOST POPULAR
-              </div>
-              
-              <div className="mt-auto">
-                <div className="bg-black/10 backdrop-blur-sm p-4 rounded-xl">
-                  <Button variant="default" size="lg" className="w-full bg-white hover:bg-white/90 text-black font-bold" asChild>
-                    <Link href="#book-call" className="flex items-center justify-center gap-2">
-                      Start today <ArrowRight className="h-5 w-5" />
-                    </Link>
-                  </Button>
+        <DesignJoyShadow 
+          variant="elevated" 
+          className="max-w-4xl mx-auto bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden transition-colors duration-300"
+          borderVisible={false}
+        >
+          <div className="grid md:grid-cols-2">
+            {/* Plan details */}
+            <div className="p-8 md:p-10 flex flex-col">
+              <div className="mb-6">
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-[var(--color-primary-accent)]/10 rounded-full text-xs font-semibold text-[var(--color-primary-accent)] uppercase tracking-wide mb-4">
+                  Most Popular
                 </div>
+                <h3 className="text-3xl font-bold mb-2">Monthly Club</h3>
+                <p className="text-brand-black/70">All-inclusive AI marketing automation</p>
               </div>
-            </div>
-          </div>
-          
-          {/* Pricing Card - Right Side */}
-          <div className="md:col-span-7 bg-black text-white p-8 rounded-3xl shadow-xl">
-            <div className="flex justify-between items-start mb-12">
-              <h3 className="text-3xl font-bold">Monthly Club</h3>
-              <span className="text-xs text-white/70 px-3 py-1 border border-white/30 rounded-full">PAUSE OR CANCEL ANYTIME</span>
-            </div>
-            
-            <div className="border-t border-white/20 my-8"></div>
-            
-            <div className="flex items-baseline mb-12">
-              <span className="text-7xl font-bold">$3,999</span>
-              <span className="text-xl text-white/70 ml-2">/month</span>
-            </div>
-            
-            <div className="bg-white/10 rounded-xl p-6 mb-8">
-              <div className="uppercase text-xs tracking-wide mb-4 text-white/70">INCLUDED</div>
               
-              <div className="grid md:grid-cols-2 gap-y-4 gap-x-6">
+              <div className="flex items-baseline mb-8">
+                <span className="text-5xl md:text-6xl font-bold">$3,999</span>
+                <span className="text-xl text-brand-black/70 ml-2">/month</span>
+              </div>
+              
+              <Button variant="default" size="lg" className="w-full mb-6 h-14 group" asChild>
+                <Link href="#book-call" className="flex items-center justify-center gap-2 text-white font-semibold">
+                  <span className="font-semibold">GET STARTED</span>
+                  <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </Button>
+              
+              <p className="text-sm text-brand-black/60 text-center">
+                Pause or cancel anytime • No long-term commitment
+              </p>
+            </div>
+            
+            {/* Features */}
+            <div className="bg-gradient-to-br from-[var(--color-primary-accent)] to-[var(--color-secondary-accent)] p-8 md:p-10 text-white">
+              <h4 className="font-semibold uppercase tracking-wider text-white/90 text-sm mb-6">Everything included:</h4>
+              
+              <ul className="space-y-4">
                 {[
                   'Unlimited custom workflow requests',
                   'Unlimited AI usage and processing',
                   '72-hour delivery on standard workflows',
                   'Complete hosting with all costs included',
-                  'Unlimited executions of your workflows',
+                  'Unlimited executions of workflows',
                   'Unlimited integrations with your tech stack',
                   '24-hour expedited delivery available',
                   'Full maintenance, monitoring, and updates'
                 ].map((feature, index) => (
-                  <div key={index} className="flex items-start gap-3">
-                    <div className="h-5 w-5 rounded-full bg-[#4D61FC] flex items-center justify-center mt-0.5 flex-shrink-0">
-                      <CheckCircle2 className="h-3 w-3 text-white" />
-                    </div>
-                    <span className="text-sm">{feature}</span>
-                  </div>
+                  <li key={index} className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-white shrink-0 mt-0.5" />
+                    <span>{feature}</span>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
-            
-            <Button variant="accent" size="lg" className="w-full h-14 bg-[#F47B54] hover:bg-[#F47B54]/90 flex gap-3 items-center justify-center" asChild>
-              <Link href="#book-call">
-                <div className="bg-white p-2 rounded">
-                  <Zap className="h-5 w-5 text-[#F47B54]" />
-                </div>
-                <span className="font-bold">Join today</span>
-              </Link>
-            </Button>
           </div>
-        </div>
+        </DesignJoyShadow>
         
-        {/* Value Proposition - Separate Card */}
-        <div className="max-w-3xl mx-auto mt-16 bg-white rounded-2xl shadow-md p-8">
-          <h4 className="text-2xl font-semibold mb-6 flex items-center">
-            <LineChart className="h-7 w-7 text-[var(--color-secondary-accent)] mr-3" />
-            Predictable Cost, Exceptional Value
-          </h4>
-          <p className="text-lg mb-6">
-            Unlike other AI services with unpredictable usage-based billing, our flat-rate subscription means your costs never fluctuate regardless of how much you use our service.
-          </p>
-          <div className="bg-gradient-to-r from-[#4D61FC]/10 to-[#6C47ED]/10 p-5 rounded-xl mb-6">
-            <p className="text-lg font-medium text-center">
-              The average agency spends <span className="text-[var(--color-secondary-accent)] font-bold">$7,500+/month</span> on separate AI tools, technical talent, and automation platforms. Consolidate everything into one subscription and save.
+        {/* Value Proposition */}
+        <div className="max-w-3xl mx-auto mt-16 grid md:grid-cols-2 gap-6">
+          <DesignJoyShadow 
+            variant="medium" 
+            className="bg-white/90 backdrop-blur-sm rounded-xl p-6 transition-colors"
+            borderVisible={false}
+          >
+            <div className="flex items-start gap-4 mb-4">
+              <div className="h-10 w-10 rounded-full bg-[var(--color-primary-accent)]/10 flex items-center justify-center shrink-0">
+                <Shield className="h-5 w-5 text-[var(--color-primary-accent)]" />
+              </div>
+              <h4 className="text-xl font-semibold">Predictable Pricing</h4>
+            </div>
+            <p className="text-brand-black/80">
+              Unlike AI services with unpredictable usage-based billing, our flat-rate subscription means your costs never fluctuate regardless of how much you use our service.
             </p>
-          </div>
+          </DesignJoyShadow>
+          
+          <DesignJoyShadow 
+            variant="medium" 
+            className="bg-white/90 backdrop-blur-sm rounded-xl p-6 transition-colors"
+            borderVisible={false}
+          >
+            <div className="flex items-start gap-4 mb-4">
+              <div className="h-10 w-10 rounded-full bg-[var(--color-primary-accent)]/10 flex items-center justify-center shrink-0">
+                <LineChart className="h-5 w-5 text-[var(--color-primary-accent)]" />
+              </div>
+              <h4 className="text-xl font-semibold">Exceptional Value</h4>
+            </div>
+            <p className="text-brand-black/80">
+              The average agency spends <span className="font-semibold">$7,500+/month</span> on separate AI tools, technical talent, and automation platforms. Consolidate everything into one subscription.
+            </p>
+          </DesignJoyShadow>
         </div>
       </div>
     </section>
