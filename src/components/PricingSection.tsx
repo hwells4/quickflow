@@ -36,10 +36,10 @@ export const PricingSection = () => {
         
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Pricing Content Column */}
-          <div className="text-center lg:text-left space-y-6 md:space-y-8">
-            <div className="flex items-baseline mb-2">
-              <span className="line-through text-muted-foreground text-xl mr-2">$5,000</span>
-              <span className="text-5xl md:text-6xl font-bold tracking-tight text-foreground">$3,000</span>
+          <div className="text-center lg:text-left space-y-6 md:space-y-8 bg-white rounded-xl border border-gray-200 shadow-lg p-8">
+            <div className="flex items-baseline mb-2 justify-center lg:justify-start">
+              <span className="line-through text-muted-foreground text-xl mr-2">$4,995</span>
+              <span className="text-5xl md:text-6xl font-bold tracking-tight text-foreground">$2,995</span>
               <span className="text-xl text-muted-foreground ml-2">/month</span>
             </div>
             <div className="inline-block bg-[color:var(--accent)]/10 text-[color:var(--accent)] px-4 py-2 rounded-full text-sm font-medium">
@@ -66,15 +66,10 @@ export const PricingSection = () => {
               </ul>
             </div>
             
-            <div className="flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
+            <div className="flex justify-center lg:justify-start">
               <Button variant="default" size="lg" asChild className="shadow-lg hover:shadow-xl transition-shadow duration-300 bg-[color:var(--accent)] hover:bg-[color:var(--accent-light)]">
                 <Link href="#book-call" className="flex items-center">
                   Claim Offer & Get Started <ArrowRight className="ml-2.5 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button variant="outline" size="lg" asChild className="hover:border-[color:var(--accent-light)] hover:text-[color:var(--accent-light)] transition-colors duration-300">
-                <Link href="#contact" className="flex items-center">
-                  Talk to an Expert <ArrowRight className="ml-2.5 h-5 w-5" />
                 </Link>
               </Button>
             </div>
@@ -82,7 +77,7 @@ export const PricingSection = () => {
 
           {/* Visual Content Column - Card inspired by hero section */}
           <div className="relative flex items-center justify-center">
-            <Card className="w-full max-w-md shadow-xl bg-card/80 backdrop-blur-md border border-border/30 rounded-xl overflow-hidden">
+            <Card className="w-full max-w-md shadow-xl bg-white border border-gray-200 rounded-xl overflow-hidden">
               {/* Adding a subtle top accent bar */}
               <div className="h-1.5 bg-gradient-to-r from-[color:var(--accent)] to-[color:var(--accent-light)]"></div>
               <div className="p-6 md:p-8 space-y-4">
@@ -153,7 +148,7 @@ export const PricingSection = () => {
               description: 'Consolidate everything into one subscription with expert implementation included.'
             }
           ].map((feature, index) => (
-            <div key={index} className="rounded-xl overflow-hidden bg-card/80 backdrop-blur-sm border border-border/30 p-6 transition-all duration-300 hover:shadow-xl hover:translate-y-[-4px]">
+            <div key={index} className="rounded-xl overflow-hidden bg-white border border-gray-200 shadow-md p-6 transition-all duration-300 hover:shadow-xl hover:translate-y-[-4px]">
               <div className="mb-4 bg-[color:var(--accent)]/10 w-12 h-12 rounded-full flex items-center justify-center">
                 {feature.icon}
               </div>

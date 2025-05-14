@@ -11,7 +11,7 @@
   --brand-quickflow-teal-support: #34d6c8; /* Teal support color for contrast */
 
   /* Core Palette */
-  --color-background: lch(98.5% 0.003 240); /* Base page background - keeping as requested */
+  --color-background: #f6f1f3; /* Updated to lighter shade */
   --color-foreground: #252340;   /* Darker purple-blue for text */
   
   --color-card: lch(100% 0 0); /* Card background - pure white for pop */

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, ChevronRight, Clock } from 'lucide-react';
+import { ArrowRight, ChevronRight, Clock, Smile } from 'lucide-react';
 import { Button } from '@/src/components/Button';
 import { cn } from '@/src/lib/utils';
 import { Card } from '@/src/components/ui/card';
@@ -13,21 +13,21 @@ export const HeroSection = () => {
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Text Content Column */}
           <div className="text-center lg:text-left space-y-6 md:space-y-8">
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
+            <h1 className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl drop-shadow-sm">
               Unlimited AI Automation. <br />
-              <span className="text-primary font-bold">
+              <span className="text-primary font-black">
                 Fully Managed. One Flat Fee.
               </span>
             </h1>
-            <p className="max-w-xl mx-auto lg:mx-0 text-lg text-muted-foreground md:text-xl">
-              Stop buying separate tools. Stop hiring experts. Stop wasting time. We build, run, and cover <em className="text-primary not-italic font-medium">everything</em> for your AI implementations and marketing automations. This is the promise of AI, delivered.
+            <p className="max-w-xl mx-auto lg:mx-0 text-lg font-medium text-foreground md:text-xl">
+              Stop buying separate tools. Stop hiring experts. Stop wasting time. We build, run, and cover <em className="text-primary not-italic font-bold">everything</em> for your AI implementations and marketing automations. This is the promise of AI, delivered.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
               <Button 
                 variant="default" 
                 size="lg" 
                 asChild 
-                className="shadow-lg hover:shadow-xl transition-shadow duration-300 text-white"
+                className="shadow-xl hover:shadow-2xl transition-shadow duration-300 text-white font-bold border-2 border-primary/20"
               >
                 <Link href="#pricing" className="flex items-center text-white">
                   Claim This Offer <ArrowRight className="ml-2.5 h-5 w-5" />
@@ -37,7 +37,7 @@ export const HeroSection = () => {
                 variant="outline" 
                 size="lg" 
                 asChild 
-                className="text-primary hover:border-primary hover:text-primary/80 transition-colors duration-300"
+                className="text-primary hover:border-primary hover:text-primary/80 transition-colors duration-300 font-bold border-2"
               >
                 <Link href="#pricing" className="flex items-center">
                   See Full Pricing <ChevronRight className="ml-2.5 h-5 w-5" />
@@ -46,63 +46,72 @@ export const HeroSection = () => {
             </div>
           </div>
 
-          {/* Visual Content Column - Rotated Card */}
+          {/* Visual Content Column - Modern Subscription Card */}
           <div className="relative group perspective flex items-center justify-center">
-            <Card className="w-full max-w-md transform-gpu transition-all duration-700 ease-out-cubic rotate-2 group-hover:rotate-0 shadow-xl hover:shadow-2xl bg-card/80 backdrop-blur-md border border-border/30 rounded-xl overflow-hidden">
-              {/* Adding a subtle top accent bar */}
-              <div className="h-1.5 bg-gradient-to-r from-primary to-primary/70"></div>
-              <div className="p-6 md:p-8 space-y-4">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-2xl font-semibold text-card-foreground">
-                    Limited Offer: First 3 Clients Only
-                  </h3>
-                  <div className="relative flex items-center justify-center">
-                    <div className="absolute inline-flex h-full w-full animate-subtle-pulse rounded-full bg-primary/50 opacity-75"></div>
-                    <span className="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+            <div className="w-full max-w-md rounded-2xl overflow-hidden bg-gradient-to-br from-purple-600 via-blue-500 to-indigo-600 shadow-[0_0_30px_rgba(0,0,0,0.2)] transform-gpu transition-all duration-700 ease-out-cubic hover:shadow-2xl hover:scale-[1.02] border-2 border-white/20">
+              <div className="p-8 space-y-6">
+                {/* Top badge */}
+                <div className="bg-black/30 backdrop-blur-md rounded-full px-4 py-1.5 w-fit border border-white/20 shadow-sm">
+                  <span className="text-white text-sm font-bold drop-shadow-sm">Start today</span>
+                </div>
+                
+                {/* Title section */}
+                <h3 className="text-4xl font-black text-white mt-4 drop-shadow-md">
+                  Join<br />
+                  QuickFlow
+                </h3>
+                <p className="text-white text-lg font-semibold drop-shadow-sm">
+                  One subscription to rule them all.
+                </p>
+                
+                {/* Card with smiley faces */}
+                <div className="bg-white/15 backdrop-blur-md p-4 rounded-xl mt-4 rotate-3 hover:rotate-0 transition-transform duration-300 border border-white/30 shadow-lg">
+                  <div className="grid grid-cols-2 gap-3">
+                    <div className="bg-red-400 rounded-lg p-3 flex items-center justify-center border border-white/20 shadow-md">
+                      <Smile className="h-8 w-8 text-white drop-shadow-sm" />
+                    </div>
+                    <div className="bg-yellow-400 rounded-lg p-3 flex items-center justify-center border border-white/20 shadow-md">
+                      <Smile className="h-8 w-8 text-white drop-shadow-sm" />
+                    </div>
+                    <div className="bg-green-400 rounded-lg p-3 flex items-center justify-center border border-white/20 shadow-md">
+                      <Smile className="h-8 w-8 text-white drop-shadow-sm" />
+                    </div>
+                    <div className="bg-blue-400 rounded-lg p-3 flex items-center justify-center border border-white/20 shadow-md">
+                      <Smile className="h-8 w-8 text-white drop-shadow-sm" />
+                    </div>
                   </div>
                 </div>
                 
-                <div className="mt-3 mb-4">
-                  <div className="flex items-baseline">
-                    <span className="line-through text-muted-foreground text-xl mr-2">$4,995</span>
-                    <span className="text-5xl font-bold tracking-tight text-foreground">$2,995</span>
-                    <span className="text-xl text-muted-foreground ml-2">/mo</span>
-                  </div>
-                  <p className="text-muted-foreground mt-1">
-                    <Clock className="inline-block h-4 w-4 mr-1" /> For Your First 3 Months
-                  </p>
-                </div>
-                
-                <div className="relative pt-2">
-                  <Image 
-                    src="/placeholder.svg?width=400&height=200&query=ai_automation_workflow_diagram_connecting_marketing_tasks_to_results_professional_clean_light_background"
-                    alt="AI Automation Workflow"
-                    width={400}
-                    height={200}
-                    className="rounded-lg shadow-md group-hover:opacity-95 transition-opacity duration-300 w-full"
-                  />
-                </div>
-                
-                <div className="space-y-3">
+                {/* CTA Buttons */}
+                <div className="space-y-4 mt-6">
                   <Button 
                     variant="default" 
-                    className="w-full bg-primary hover:bg-primary/90 transition-colors duration-300 text-white"
-                    style={{ color: "white" }}
+                    className="w-full bg-white hover:bg-white/90 text-black font-extrabold text-lg py-6 rounded-xl transition-all duration-300 shadow-md border-2 border-white/50"
                   >
-                    Claim This Offer
+                    See pricing
                   </Button>
-                  <div className="text-center">
-                    <Link href="#contact" className="text-sm text-primary hover:text-primary/80 transition-colors duration-300">
-                      Book a 15-min Intro Call
-                    </Link>
+                  
+                  <div className="flex items-center bg-black/30 backdrop-blur-md rounded-xl p-4 gap-3 border border-white/20 shadow-md">
+                    <div className="bg-yellow-400 rounded-full h-10 w-10 flex items-center justify-center flex-shrink-0 border-2 border-white/40 shadow-sm">
+                      <Smile className="h-6 w-6 text-white drop-shadow-sm" />
+                    </div>
+                    <div className="flex-grow">
+                      <p className="text-white text-sm font-bold drop-shadow-sm">Book a 15-min intro call</p>
+                      <p className="text-white/90 text-xs font-medium">Schedule now</p>
+                    </div>
+                    <div className="flex-shrink-0">
+                      <div className="bg-white rounded-full h-8 w-8 flex items-center justify-center shadow-md border border-white/60">
+                        <ArrowRight className="h-4 w-4 text-black" />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </Card>
+            </div>
             
             {/* Subtle background glow elements */}
-            <div aria-hidden="true" className="absolute -bottom-12 -right-12 w-48 h-48 bg-gradient-to-tr from-primary/15 via-transparent to-transparent rounded-full opacity-50 blur-2xl group-hover:opacity-70 transition-opacity duration-700 -z-10"></div>
-            <div aria-hidden="true" className="absolute -top-12 -left-12 w-40 h-40 bg-gradient-to-br from-blue-500/10 via-transparent to-transparent rounded-full opacity-40 blur-xl group-hover:opacity-60 transition-opacity duration-700 -z-10"></div>
+            <div aria-hidden="true" className="absolute -bottom-12 -right-12 w-64 h-64 bg-primary/30 rounded-full opacity-70 blur-2xl -z-10"></div>
+            <div aria-hidden="true" className="absolute -top-12 -left-12 w-64 h-64 bg-blue-500/30 rounded-full opacity-60 blur-2xl -z-10"></div>
           </div>
         </div>
       </div>

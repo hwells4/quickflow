@@ -34,10 +34,10 @@ export default function RootLayout({
         <div className="relative min-h-screen overflow-hidden">
           <DepthShadowBackground 
             className="absolute inset-0 z-0" // Component is designed to be absolute within a relative parent
-            primaryColor="#ede6e8"
-            secondaryColor="#ede6e8"
-            tertiaryColor="#ede6e8"
-            intensity="medium"
+            primaryColor="#f6f1f3"
+            secondaryColor="#f6f1f3"
+            tertiaryColor="#f6f1f3"
+            intensity="subtle"
             pattern="corners"
           />
           
