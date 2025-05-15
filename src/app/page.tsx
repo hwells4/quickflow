@@ -40,6 +40,9 @@ import { AutomationLibrarySection } from '@/src/components/landing/automation-li
 import { HowItWorksSection } from '@/src/components/landing/how-it-works-section';
 import { FinalCtaSection } from '@/src/components/landing/final-cta-section';
 import { BentoCard, BentoGrid } from "@/src/components/ui/bento-grid";
+import { WorkflowFeatureSection } from '@/src/components/WorkflowFeatureSection';
+import AutomationShowcase from '@/src/components/AutomationShowcase';
+import { AutomationLibrary } from '@/src/components/AutomationLibrary';
 
 // Define features for BentoGrid directly here
 const bentoFeatures = [
@@ -49,7 +52,16 @@ const bentoFeatures = [
     description: "Get \"LLM-ready\" content. Dominate AI search. Future-proof your visibility.",
     href: "/",
     cta: "See Pricing",
-    background: <img src="https://source.unsplash.com/random/800x600?technology&query=search" alt="AI Search Optimization background" className="absolute -right-20 -top-20 opacity-60 w-[400px] h-[400px] object-cover" />,
+    background: (
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -right-20 -top-20 w-[400px] h-[400px]">
+          <div className="w-full h-full bg-gradient-to-br from-blue-600/30 to-purple-600/30 rounded-full blur-3xl"></div>
+        </div>
+        <div className="absolute right-8 top-8 flex items-center justify-center">
+          <div className="text-8xl opacity-10 font-bold text-indigo-600">#1</div>
+        </div>
+      </div>
+    ),
     className: "lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-3",
   },
   {
@@ -58,7 +70,23 @@ const bentoFeatures = [
     description: "AI learns your brand's unique tone. Always on-brand content. Effortlessly.",
     href: "/",
     cta: "See Pricing",
-    background: <img src="https://source.unsplash.com/random/800x600?world&query=languages" alt="Brand Voice AI background" className="absolute -right-20 -top-20 opacity-60 w-[400px] h-[400px] object-cover" />,
+    background: (
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -right-20 -top-20 w-[400px] h-[400px]">
+          <div className="w-full h-full bg-gradient-to-br from-purple-600/30 to-pink-600/30 rounded-full blur-3xl"></div>
+        </div>
+        <div className="absolute right-10 top-10 w-32 h-32 opacity-10">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+            <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="currentColor" strokeWidth="2"/>
+            <path d="M3 15C4.65685 15 6 13.6569 6 12C6 10.3431 4.65685 9 3 9C1.34315 9 0 10.3431 0 12C0 13.6569 1.34315 15 3 15Z" stroke="currentColor" strokeWidth="2"/>
+            <path d="M21 15C22.6569 15 24 13.6569 24 12C24 10.3431 22.6569 9 21 9C19.3431 9 18 10.3431 18 12C18 13.6569 19.3431 15 21 15Z" stroke="currentColor" strokeWidth="2"/>
+            <path d="M9 12H15" stroke="currentColor" strokeWidth="2"/>
+            <path d="M0 12H6" stroke="currentColor" strokeWidth="2"/>
+            <path d="M18 12H24" stroke="currentColor" strokeWidth="2"/>
+          </svg>
+        </div>
+      </div>
+    ),
     className: "lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-4",
   },
   {
@@ -67,7 +95,20 @@ const bentoFeatures = [
     description: "Uncover market trends. Understand customers. AI automates your research.",
     href: "/",
     cta: "See Pricing",
-    background: <img src="https://source.unsplash.com/random/800x600?abstract&query=files" alt="AI Audience Insights background" className="absolute -right-20 -top-20 opacity-60 w-[400px] h-[400px] object-cover" />,
+    background: (
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -right-20 -top-20 w-[400px] h-[400px]">
+          <div className="w-full h-full bg-gradient-to-br from-emerald-600/30 to-blue-600/30 rounded-full blur-3xl"></div>
+        </div>
+        <div className="absolute right-8 top-8 opacity-10">
+          <div className="flex space-x-2">
+            <div className="w-16 h-32 bg-emerald-600 rounded-t-lg"></div>
+            <div className="w-16 h-24 bg-blue-600 rounded-t-lg"></div>
+            <div className="w-16 h-40 bg-emerald-600 rounded-t-lg"></div>
+          </div>
+        </div>
+      </div>
+    ),
     className: "lg:row-start-1 lg:row-end-4 lg:col-start-2 lg:col-end-3",
   },
   {
@@ -76,7 +117,21 @@ const bentoFeatures = [
     description: "One asset, many formats. Distribute content everywhere. Automatically save hours.",
     href: "/",
     cta: "See Pricing",
-    background: <img src="https://source.unsplash.com/random/800x600?time&query=calendar" alt="Content Multiplier background" className="absolute -right-20 -top-20 opacity-60 w-[400px] h-[400px] object-cover" />,
+    background: (
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -right-20 -top-20 w-[400px] h-[400px]">
+          <div className="w-full h-full bg-gradient-to-br from-amber-600/30 to-rose-600/30 rounded-full blur-3xl"></div>
+        </div>
+        <div className="absolute right-10 top-10 opacity-10">
+          <div className="grid grid-cols-2 gap-2">
+            <div className="w-14 h-14 border-2 border-amber-600 rounded-lg"></div>
+            <div className="w-14 h-14 border-2 border-rose-600 rounded-lg"></div>
+            <div className="w-14 h-14 border-2 border-amber-600 rounded-lg"></div>
+            <div className="w-14 h-14 border-2 border-rose-600 rounded-lg"></div>
+          </div>
+        </div>
+      </div>
+    ),
     className: "lg:col-start-3 lg:col-end-3 lg:row-start-1 lg:row-end-2",
   },
   {
@@ -85,7 +140,20 @@ const bentoFeatures = [
     description: "Capture, qualify, nurture leads 24/7. Personalized sequences that convert.",
     href: "/",
     cta: "See Pricing",
-    background: <img src="https://source.unsplash.com/random/800x600?communication&query=notifications" alt="Lead Automation background" className="absolute -right-20 -top-20 opacity-60 w-[400px] h-[400px] object-cover" />,
+    background: (
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -right-20 -top-20 w-[400px] h-[400px]">
+          <div className="w-full h-full bg-gradient-to-br from-indigo-600/30 to-cyan-600/30 rounded-full blur-3xl"></div>
+        </div>
+        <div className="absolute right-8 top-8 opacity-10">
+          <div className="flex flex-col items-end">
+            <div className="w-40 h-8 border-2 border-indigo-600 rounded-full mb-2"></div>
+            <div className="w-32 h-8 border-2 border-cyan-600 rounded-full mb-2"></div>
+            <div className="w-24 h-8 border-2 border-indigo-600 rounded-full"></div>
+          </div>
+        </div>
+      </div>
+    ),
     className: "lg:col-start-3 lg:col-end-3 lg:row-start-2 lg:row-end-4",
   },
 ];
@@ -134,35 +202,11 @@ export default function Home() {
       <Navbar />
       <main className="flex-grow">
         <HeroSection />
-        <OneSubscriptionSection />
-        <AutomationLibrarySection />
-
-        {/* Bento Grid Section */}
-        <section className="py-12 md:py-16 lg:py-20 bg-background">
-          <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl mb-4 md:mb-6">
-            Ready-To-Use <span className="italic-highlight text-[color:var(--accent)]">Automation Library</span>
-          </h2>
-            <p className="text-lg text-muted-foreground text-center mb-12 max-w-3xl mx-auto">
-              Explore powerful automations we design, implement, and fully manage for your marketing success.
-            </p>
-            {/* Use BentoGrid directly */}
-            <BentoGrid className="lg:grid-rows-3 max-w-6xl mx-auto">
-              {bentoFeatures.map((feature) => (
-                <BentoCard key={feature.name} {...feature} />
-              ))}
-            </BentoGrid>
-          </div>
-        </section>
-
+        <WorkflowFeatureSection />
+        <AutomationShowcase />
+ 
         {/* Pricing Section */}
         <PricingSection />
-
-        {/* How It Works Section - Modernized with cleaner steps */}
-        <HowItWorksSection />
-
-        {/* Animated Testimonials Section */}
-        <AnimatedTestimonialsBasic />
 
         {/* FAQ Section using the new component */}
         <FAQ 
@@ -242,6 +286,7 @@ export default function Home() {
         />
 
         <FinalCtaSection />
+
       </main>
       <Footer />
     </div>

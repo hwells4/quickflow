@@ -49,10 +49,10 @@ export const AutomationLibrarySection = () => {
       <div className="container-custom">
         <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl mb-4 md:mb-6">
-            Ready-To-Use <span className="italic-highlight text-[color:var(--accent)]">Automation Library</span>
+            Workflow <span className="italic-highlight text-[color:var(--accent)]">Templates</span>
           </h2>
           <p className="text-lg text-muted-foreground md:text-xl">
-            These templates show exactly what we can build for your business. Each solves a specific marketing challenge.
+            Pre-built automation templates ready to be customized for your business needs.
           </p>
         </div>
         

@@ -1,28 +1,37 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, ChevronRight, Clock, Smile } from 'lucide-react';
+import { 
+  ArrowRight, 
+  ChevronRight, 
+  Clock, 
+  Infinity as InfinityIcon, 
+  Brain, 
+  Shield, 
+  HandHelping,
+  DollarSign
+} from 'lucide-react';
 import { Button } from '@/src/components/Button';
 import { cn } from '@/src/lib/utils';
 import { Card } from '@/src/components/ui/card';
 
 export const HeroSection = () => {
   return (
-    <section className="relative w-full overflow-hidden">
+    <section className="relative w-full overflow-hidden pt-12 pb-20 md:pt-20 md:pb-28">
       {/* The global DepthShadowBackground from layout.tsx will be visible */}
-      <div className="container-custom section-spacing">
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+      <div className="container-custom max-w-7xl">
+        <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2 lg:gap-24">
           {/* Text Content Column */}
-          <div className="text-center lg:text-left space-y-6 md:space-y-8">
-            <h1 className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl drop-shadow-sm">
+          <div className="text-center lg:text-left space-y-10">
+            <h1 className="text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl md:text-5xl lg:text-6xl drop-shadow-sm">
               Unlimited AI Automation. <br />
               <span className="text-primary font-black">
                 Fully Managed. One Flat Fee.
               </span>
             </h1>
-            <p className="max-w-xl mx-auto lg:mx-0 text-lg font-medium text-foreground md:text-xl">
-              Stop buying separate tools. Stop hiring experts. Stop wasting time. We build, run, and cover <em className="text-primary not-italic font-bold">everything</em> for your AI implementations and marketing automations. This is the promise of AI, delivered.
+            <p className="max-w-2xl mx-auto lg:mx-0 text-base font-medium text-foreground md:text-lg">
+            Stop wasting time on technical implementation. We build and manage your custom AI marketing automations for one flat monthly fee.
             </p>
-            <div className="flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
+            <div className="flex flex-col gap-6 sm:flex-row sm:justify-center lg:justify-start pt-4">
               <Button 
                 variant="default" 
                 size="lg" 
@@ -46,72 +55,70 @@ export const HeroSection = () => {
             </div>
           </div>
 
-          {/* Visual Content Column - Modern Subscription Card */}
-          <div className="relative group perspective flex items-center justify-center">
+          {/* Visual Content Column - Value Powerhouse Card */}
+          <div className="relative group perspective flex items-center justify-center mt-8 lg:mt-0">
             <div className="w-full max-w-md rounded-2xl overflow-hidden bg-gradient-to-br from-purple-600 via-blue-500 to-indigo-600 shadow-[0_0_30px_rgba(0,0,0,0.2)] transform-gpu transition-all duration-700 ease-out-cubic hover:shadow-2xl hover:scale-[1.02] border-2 border-white/20">
-              <div className="p-8 space-y-6">
+              <div className="p-8 md:p-10 space-y-8">
                 {/* Top badge */}
                 <div className="bg-black/30 backdrop-blur-md rounded-full px-4 py-1.5 w-fit border border-white/20 shadow-sm">
-                  <span className="text-white text-sm font-bold drop-shadow-sm">Start today</span>
+                  <span className="text-white text-sm font-bold drop-shadow-sm">Value Powerhouse</span>
                 </div>
                 
-                {/* Title section */}
-                <h3 className="text-4xl font-black text-white mt-4 drop-shadow-md">
-                  Join<br />
-                  QuickFlow
+                {/* Title section - more compact */}
+                <h3 className="text-2xl font-black text-white drop-shadow-md">
+                  The Last AI Subscription<br />
+                  <span className="text-2xl font-bold">You'll Ever Need</span>
                 </h3>
-                <p className="text-white text-lg font-semibold drop-shadow-sm">
-                  One subscription to rule them all.
-                </p>
                 
-                {/* Card with smiley faces */}
-                <div className="bg-white/15 backdrop-blur-md p-4 rounded-xl mt-4 rotate-3 hover:rotate-0 transition-transform duration-300 border border-white/30 shadow-lg">
-                  <div className="grid grid-cols-2 gap-3">
-                    <div className="bg-red-400 rounded-lg p-3 flex items-center justify-center border border-white/20 shadow-md">
-                      <Smile className="h-8 w-8 text-white drop-shadow-sm" />
+                {/* 2x2 Grid of icons and text - more compact */}
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-white/15 backdrop-blur-md p-4 rounded-xl hover:bg-white/20 transition-all duration-300 flex flex-col items-center justify-center border border-white/30 shadow-lg">
+                    <div className="bg-purple-500/30 rounded-full p-2.5 mb-2 flex items-center justify-center border border-white/20">
+                      <InfinityIcon className="h-6 w-6 text-white drop-shadow-sm" />
                     </div>
-                    <div className="bg-yellow-400 rounded-lg p-3 flex items-center justify-center border border-white/20 shadow-md">
-                      <Smile className="h-8 w-8 text-white drop-shadow-sm" />
+                    <span className="text-white font-medium text-center text-sm">Unlimited Workflows</span>
+                  </div>
+                  
+                  <div className="bg-white/15 backdrop-blur-md p-4 rounded-xl hover:bg-white/20 transition-all duration-300 flex flex-col items-center justify-center border border-white/30 shadow-lg">
+                    <div className="bg-blue-500/30 rounded-full p-2.5 mb-2 flex items-center justify-center border border-white/20">
+                      <Brain className="h-6 w-6 text-white drop-shadow-sm" />
                     </div>
-                    <div className="bg-green-400 rounded-lg p-3 flex items-center justify-center border border-white/20 shadow-md">
-                      <Smile className="h-8 w-8 text-white drop-shadow-sm" />
+                    <span className="text-white font-medium text-center text-sm">Unlimited AI Credits</span>
+                  </div>
+                  
+                  <div className="bg-white/15 backdrop-blur-md p-4 rounded-xl hover:bg-white/20 transition-all duration-300 flex flex-col items-center justify-center border border-white/30 shadow-lg">
+                    <div className="bg-indigo-500/30 rounded-full p-2.5 mb-2 flex items-center justify-center border border-white/20">
+                      <DollarSign className="h-6 w-6 text-white drop-shadow-sm" />
                     </div>
-                    <div className="bg-blue-400 rounded-lg p-3 flex items-center justify-center border border-white/20 shadow-md">
-                      <Smile className="h-8 w-8 text-white drop-shadow-sm" />
+                    <span className="text-white font-medium text-center text-sm">One Flat Cost</span>
+                  </div>
+                  
+                  <div className="bg-white/15 backdrop-blur-md p-4 rounded-xl hover:bg-white/20 transition-all duration-300 flex flex-col items-center justify-center border border-white/30 shadow-lg">
+                    <div className="bg-teal-500/30 rounded-full p-2.5 mb-2 flex items-center justify-center border border-white/20">
+                      <HandHelping className="h-6 w-6 text-white drop-shadow-sm" />
                     </div>
+                    <span className="text-white font-medium text-center text-sm">Fully Managed</span>
                   </div>
                 </div>
                 
-                {/* CTA Buttons */}
-                <div className="space-y-4 mt-6">
+                {/* CTA Button - more compact */}
+                <div className="pt-4">
                   <Button 
                     variant="default" 
-                    className="w-full bg-white hover:bg-white/90 text-black font-extrabold text-lg py-6 rounded-xl transition-all duration-300 shadow-md border-2 border-white/50"
+                    className="w-full bg-white hover:bg-white/90 text-black font-bold text-base py-4 rounded-xl transition-all duration-300 shadow-md border-2 border-white/50"
+                    asChild
                   >
-                    See pricing
+                    <Link href="#pricing">
+                      Unlock Everything Now
+                    </Link>
                   </Button>
-                  
-                  <div className="flex items-center bg-black/30 backdrop-blur-md rounded-xl p-4 gap-3 border border-white/20 shadow-md">
-                    <div className="bg-yellow-400 rounded-full h-10 w-10 flex items-center justify-center flex-shrink-0 border-2 border-white/40 shadow-sm">
-                      <Smile className="h-6 w-6 text-white drop-shadow-sm" />
-                    </div>
-                    <div className="flex-grow">
-                      <p className="text-white text-sm font-bold drop-shadow-sm">Book a 15-min intro call</p>
-                      <p className="text-white/90 text-xs font-medium">Schedule now</p>
-                    </div>
-                    <div className="flex-shrink-0">
-                      <div className="bg-white rounded-full h-8 w-8 flex items-center justify-center shadow-md border border-white/60">
-                        <ArrowRight className="h-4 w-4 text-black" />
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
             
             {/* Subtle background glow elements */}
-            <div aria-hidden="true" className="absolute -bottom-12 -right-12 w-64 h-64 bg-primary/30 rounded-full opacity-70 blur-2xl -z-10"></div>
-            <div aria-hidden="true" className="absolute -top-12 -left-12 w-64 h-64 bg-blue-500/30 rounded-full opacity-60 blur-2xl -z-10"></div>
+            <div aria-hidden="true" className="absolute -bottom-12 -right-12 w-64 h-64 bg-primary/20 rounded-full opacity-70 blur-2xl -z-10"></div>
+            <div aria-hidden="true" className="absolute -top-12 -left-12 w-64 h-64 bg-blue-500/20 rounded-full opacity-60 blur-2xl -z-10"></div>
           </div>
         </div>
       </div>

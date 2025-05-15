@@ -16,7 +16,7 @@ export const FinalCtaSection = () => {
   return (
     <section 
       id="book-call" 
-      className="section-spacing bg-slate-900 dark:bg-black relative overflow-hidden text-primary-foreground"
+      className="py-20 md:py-28 bg-slate-900 dark:bg-black relative overflow-hidden text-white"
     >
       {/* Colorful circle decorations - made more subtle and performant */}
       <div 
@@ -41,58 +41,55 @@ export const FinalCtaSection = () => {
 
       <div className="container-custom relative z-10">
         <div className="max-w-4xl mx-auto">
-          <div className="mb-12 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+          <div className="mb-16 text-center">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               See if MarketFlow is <br className="hidden md:block" /> the right fit for you
             </h2>
-            <p className="text-xl md:text-2xl italic font-light text-slate-300/80 dark:text-slate-400/80">
+            <p className="text-xl md:text-2xl italic font-light text-white opacity-90">
               (it totally is)
             </p>
           </div>
           
-          <div className="grid md:grid-cols-5 gap-8 items-start">
-            <div className="md:col-span-2 text-slate-100 dark:text-slate-200">
-              <p className="text-xl mb-6 leading-relaxed">
+          <div className="grid md:grid-cols-5 gap-10 items-start">
+            <div className="md:col-span-2 text-white">
+              <p className="text-xl mb-8 leading-relaxed">
                 Schedule a quick, 15 minute guided tour through MarketFlow.
               </p>
               
-              <div className="bg-[color:var(--accent)] text-white p-6 rounded-xl mb-8 shadow-lg">
-                <p className="font-medium leading-relaxed">
+              <div className="bg-[color:var(--accent)] p-7 rounded-xl mb-10 shadow-xl text-white">
+                <p className="font-medium leading-relaxed text-white">
                   MarketFlow is experiencing a high volume of bookings, so slots are limited. For faster service, email 
-                  <Link href="mailto:hello@marketflow.vip" className="font-semibold underline hover:text-white/80 transition-colors ml-1 text-white">
+                  <Link href="mailto:hello@marketflow.vip" className="font-semibold text-white underline hover:opacity-90 transition-opacity ml-1">
                     hello@marketflow.vip
                   </Link> for a same-day response.
                 </p>
               </div>
               
-              <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-slate-300/70 dark:text-slate-400/70">
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-white opacity-80">
                 <span>Headquartered in Phoenix, Arizona</span>
-                <span className="h-1 w-1 rounded-full bg-slate-500/50"></span>
-                <Link href="/terms" className="hover:text-slate-100 dark:hover:text-white transition-colors">Terms of service</Link>
-                <span className="h-1 w-1 rounded-full bg-slate-500/50"></span>
-                <Link href="/privacy" className="hover:text-slate-100 dark:hover:text-white transition-colors">Privacy Policy</Link>
+                <span className="h-1 w-1 rounded-full bg-white/50"></span>
+                <Link href="/terms" className="hover:text-white hover:underline transition-colors">Terms of service</Link>
+                <span className="h-1 w-1 rounded-full bg-white/50"></span>
+                <Link href="/privacy" className="hover:text-white hover:underline transition-colors">Privacy Policy</Link>
               </div>
             </div>
             
-            <div className="md:col-span-3 bg-slate-800/70 dark:bg-black/50 p-6 rounded-xl shadow-2xl backdrop-blur-sm border border-slate-700/50">
-              <div className="bg-slate-900/80 dark:bg-black/70 rounded-lg p-6 min-h-[450px] md:min-h-[500px] flex flex-col items-center justify-center text-center">
+            <div className="md:col-span-3 bg-slate-800/70 dark:bg-black/50 p-8 rounded-xl shadow-2xl backdrop-blur-sm border border-slate-700/50">
+              <div className="bg-slate-900/80 dark:bg-black/70 rounded-lg p-8 min-h-[450px] md:min-h-[500px] flex flex-col items-center justify-center text-center">
                 <div className="mb-4">
-                  <div className="text-slate-100 dark:text-white font-semibold text-2xl mb-3">May 2024</div> {/* Updated Year */}
-                  <p className="text-slate-300/80 dark:text-slate-400/80 mb-8 text-lg">
+                  <div className="text-white font-semibold text-2xl mb-4">May 2024</div> {/* Updated Year */}
+                  <p className="text-white mb-8 text-lg">
                     Calendar booking widget coming soon!
                   </p>
-                  {/* Placeholder for future calendar controls */}
-                  {/* <div className="grid grid-cols-7 gap-2 mb-4 text-xs text-slate-400/70">
-                    <div>SUN</div> <div>MON</div> <div>TUE</div> <div>WED</div> <div>THU</div> <div>FRI</div> <div>SAT</div>
-                  </div> */}
+                  
                   <div className="flex justify-center items-center h-48 w-full border-2 border-dashed border-slate-700/60 rounded-md bg-slate-800/50 dark:bg-black/40">
-                    <p className="text-slate-400/90 dark:text-slate-500/90 italic">Booking Calendar Area</p>
+                    <p className="text-white italic">Booking Calendar Area</p>
                   </div>
-                  <div className="flex justify-center gap-4 mt-8">
-                    <button className="px-6 py-2.5 bg-[color:var(--accent)] text-white font-semibold rounded-md hover:bg-[color:var(--accent-light)] transition-colors shadow-md">
+                  <div className="flex justify-center gap-6 mt-10">
+                    <button className="px-7 py-3 bg-[color:var(--accent)] text-white font-semibold rounded-md hover:bg-[color:var(--accent-light)] transition-colors shadow-lg">
                       15 min Call
                     </button>
-                    <button className="px-6 py-2.5 bg-slate-700/80 dark:bg-slate-600/80 text-white font-semibold rounded-md hover:bg-slate-600/90 dark:hover:bg-slate-500/90 transition-colors shadow-md">
+                    <button className="px-7 py-3 bg-slate-700 dark:bg-slate-600 text-white font-semibold rounded-md hover:bg-slate-600 dark:hover:bg-slate-500 transition-colors shadow-lg">
                       Explore Docs
                     </button>
                   </div>
